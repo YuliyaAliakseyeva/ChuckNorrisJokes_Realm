@@ -20,9 +20,7 @@ protocol RandomVMProtocol {
     func changeStateIfNeeded()
 }
 
-
 final class RandomViewModel: RandomVMProtocol {
-    
     
     private var networkManager: NetworkManager
     private var storeManager = StoreManager()
@@ -38,7 +36,6 @@ final class RandomViewModel: RandomVMProtocol {
     init(networkManager: NetworkManager) {
         self.networkManager = networkManager
     }
-    
     
     func changeStateIfNeeded() {
         state = .loading
